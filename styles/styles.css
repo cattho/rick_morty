@@ -1,0 +1,124 @@
+:root{
+    --main:#69C8ECFF;
+    --second:#FB6467FF;
+    --border:#FAFD7CFF;
+    --placeholder:#82491EFF;
+    --info:#A6EEE6FF;
+}
+
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Patrick Hand', cursive;
+}
+
+#main{
+    display: flex;
+}
+
+body{
+    background: var(--main);
+    font-family: 'Roboto,' sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+header{
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search{
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+}
+
+.search::placeholder{
+    color: var(--placeholder);
+}
+
+.search:focus{
+    outline: none;
+    background: transparent;
+}
+
+#main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.card{
+    width: 300px;
+    margin: 1rem;
+    background: var(--second);
+    box-shadow: 0 4px 5px var(--border);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.card:hover{
+
+}
+
+.card-info{
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;    
+}
+
+.card-info h3{
+    margin-top: 0%;    
+}
+
+.card img{
+    width: 100%;
+}
+
+.card-info span{
+    background: var(--border);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.card-info span .green{
+    color: lightgreen;
+}
+
+.card-info span.orange{
+    color: orange;
+}
+
+.card-info span.red{
+    color: red;
+}
+
+.overview{
+    background: #fff;
+    padding: 2rem;
+    position: absolute;
+    margin:0 0 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.card:hover .overview{
+    transform: translateY(0);
+}
